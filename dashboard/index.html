@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold mb-6 text-center">Create New Item</h1>
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <form id="item_form">
+          <!--  Image Upload -->
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="itemImage"
+              >item Image</label
+            >
+            <input
+              type="file"
+              id="itemImage"
+              class="w-full px-3 py-2 border rounded-md"
+            />
+          </div>
+
+          <!--  Title -->
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="Title"
+              >Title</label
+            >
+            <input
+              type="text"
+              id="Title"
+              placeholder="Enter title"
+              class="w-full px-3 py-2 border rounded-md"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="Title"
+              >Description</label
+            >
+            <textarea
+              type="text"
+              id="itemDesc"
+              placeholder="Enter Description"
+              class="w-full px-3 py-2 border rounded-md"
+            >
+            </textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex justify-center">
+            <button id="submit_btn"
+              type="submit"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            >
+              Add
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
