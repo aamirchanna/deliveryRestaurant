@@ -30,6 +30,7 @@ import {
     banner: e.target[0].files[0],
     title: e.target[1].value,
     desc: e.target[2].value,
+    price: e.target[3].value,
     createdBy: currentUser.uid,  // Corrected property access
     createdByEmail: auth.currentUser.email,
     likes: [],
@@ -40,23 +41,30 @@ import {
 
     const imgRef= ref(storage , itemInfo.banner.name)
     uploadBytes(imgRef , itemInfo.banner).then(()=>{
-    getDownloadURL(imgRef , itemInfo)
-    itemInfo.banner = url
-    console.log("url agyaw")
-
+    getDownloadURL(imgRef , itemInfo).then((url)=>{
+      itemInfo.banner = url
+      console.log("url agyaw")
+  
+      
+    
           // add document to item collection
 const itemCollection = collection(db , "fooditems")
 addDoc(itemCollection , itemInfo).then(()=>{
 submit_btn.disabled = false;
 submit_btn.innerHTML = "add"
 console.log("item added")
-window.location.href = "./menu/index.html"
+window.location.href = "../menu/index.html"
 }).catch((err)=>{
     console.log("collection mistake" , err)
 })  
 
-}).catch((err)=>{
-    console.log("url nh derah " , err)
+    
+    
+    }).catch((err)=>{
+      console.log("url nh derah " , err)
+  })
+
+
 })
 
 })
