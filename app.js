@@ -6,17 +6,13 @@ import {
     getDoc,
     doc,
     onAuthStateChanged,
-    getDocs,
-    collection,
-    updateDoc,
-    arrayUnion,
-    arrayRemove,
+   
 } from "./utils/utils.js";
 const logout_btn = document.getElementById("logout_btn");
 const login_link = document.getElementById("login_link");
 const signIn_link = document.getElementById("signIn_link");
 const dashboard_link = document.getElementById("dashboard_link");
-// const user_img = document.getElementById("user_img");
+const search = document.getElementById("search");
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -39,3 +35,5 @@ onAuthStateChanged(auth, (user) => {
         signOut(auth);
     });
     });
+
+    

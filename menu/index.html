@@ -4,57 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      .uniform-image {
+    width: 300px; /* Set desired width */
+    height: 200px; /* Set desired height */
+    object-fit: cover; /* Ensures image maintains aspect ratio */
+    object-position: center;
+}
 
+    </style>
 </head>
 <body>
 
-  <div class="flex min-h-screen flex-col">
-    <header class=" bg-gray-900 text-white ">
-      <div class="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a class="text-xl font-bold" href="#">
-          Delicious Bites
-        </a>
-        <nav class="flex items-center gap-4">
-          <div class="flex items-center space-x-4">
-            <input
-              class="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 hidden md:block"
-              placeholder="Search"
-              type="search"
-            />
-          <a  id="menu-link" class="hover:text-accent" href="#">
-            Menu
-          </a>
-          <a class="hover:text-accent" href="#">
-            Cart
-          </a>
-          <a href="/auth/login/index.html">
-          <button id="login_link" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
-            Login
-          </button></a>
-          <a href="/auth/signup/index.html">
-          <button id="signIn_link" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
-            Sign In
-          </button></a>
-          <a href="/">
-          <button  id="logout_btn" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
-            LogOut
-          </button></a>
-          
-        </nav>
-      </div>
+<div class="flex min-h-screen flex-col">
+    <header class="bg-gray-900 text-white">
+        <div class="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+            <a class="text-xl font-bold" href="#">
+                Delicious Bites
+            </a>
+            <nav class="flex items-center gap-4">
+                <a id="cart-link" class="hover:text-accent" href="#">
+                    Cart
+                </a>
+            </nav>
+        </div>
     </header>
 
-
     <section class="py-12 sm:py-20">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Menu</h2>
+        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">Explore our diverse selection of delectable dishes, each crafted with the freshest ingredients and made to satisfy your cravings.</p>
+    </div>
       <div id="all_items_container" class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 container mx-auto px-4 sm:px-6 lg:px-8"></div>
   </section>
 
-    
-    
+</div>
 
-
-    <script src="https://cdn.tailwindcss.com"></script>
+<!-- Cart Sidebar -->
+<div id="cart" class="fixed right-0 top-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300">
+    <div class="p-4 flex flex-col h-full">
+        <h2 class="text-xl font-bold mb-4">Your Cart</h2>
+        <div id="cart-items" class="flex-1 overflow-y-auto mb-4">
+            <!-- Cart items will be added here -->
+        </div>
+        <div class="border-t pt-4">
+            <span id="total-price" class="font-bold">Total: $0.00</span>
+        </div>
+        <button id="close-cart" class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md">Close</button>
+    </div>
+</div>
 
 <script src="app.js" type="module"></script>
 </body>

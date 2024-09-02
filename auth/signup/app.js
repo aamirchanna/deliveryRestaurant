@@ -6,7 +6,8 @@ import {
   } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
   import {
     auth, 
-     createUserWithEmailAndPassword,
+    db,
+    createUserWithEmailAndPassword,
     doc,
     setDoc,
     storage,

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex min-h-screen flex-col">
+        <header class="bg-gray-900 text-white">
+            <div class="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+                <a class="text-xl font-bold" href="#">
+                    Delicious Bites
+                </a>
+                <nav class="flex items-center gap-4">
+                    <a class="hover:text-accent" href="./menu/index.html">
+                        Menu
+                    </a>
+                    <a class="hover:text-accent" href="#cart">
+                        Cart
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <!-- Existing Content -->
+            <section class="py-12 sm:py-20">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="mx-auto max-w-2xl text-center">
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Menu</h2>
+                        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">Explore our diverse selection of delectable dishes, each crafted with the freshest ingredients and made to satisfy your cravings.</p>
+                    </div>
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+                        <!-- Dish 1 -->
+                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                            <div class="p-6 space-y-4">
+                                <img src="./assets/img1.jpg" width="300" height="200" style="aspect-ratio: 300 / 200; object-fit: cover;" alt="Dish 1" class="rounded-md object-cover" />
+                                <div>
+                                    <h3 class="text-lg font-medium">Spicy Chicken Curry</h3>
+                                    <p class="mt-2 text-muted-foreground">Tender chicken in a flavorful curry sauce, served with fragrant basmati rice.</p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-medium">$12.99</span>
+                                    <a href="#cart" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 rounded-md">
+                                        Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dish 2 -->
+                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                            <div class="p-6 space-y-4">
+                                <img src="./assets/curry.jpg" width="300" height="200" alt="Dish 2" class="rounded-md object-cover" style="aspect-ratio: 300 / 200; object-fit: cover;" />
+                                <div>
+                                    <h3 class="text-lg font-medium">Grilled Salmon Salad</h3>
+                                    <p class="mt-2 text-muted-foreground">Fresh greens, grilled salmon, avocado, and a tangy vinaigrette.</p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-medium">$15.99</span>
+                                    <a href="#cart" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 rounded-md">
+                                        Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dish 3 -->
+                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                            <div class="p-6 space-y-4">
+                                <img src="./assets/stirfry.jpeg" width="300" height="200" alt="Dish 3" class="rounded-md object-cover" style="aspect-ratio: 300 / 200; object-fit: cover;" />
+                                <div>
+                                    <h3 class="text-lg font-medium">Vegetable Stir-Fry</h3>
+                                    <p class="mt-2 text-muted-foreground">A colorful mix of fresh vegetables in a savory sauce, served with steamed rice.</p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-medium">$10.99</span>
+                                    <a href="#cart" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border
